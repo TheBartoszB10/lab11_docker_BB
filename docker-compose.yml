@@ -1,6 +1,6 @@
 services:
   web1:
-    image: nginx
+    image: nginx:latest
     container_name: web1
     volumes:
       - ./html:/usr/share/nginx/html:ro
@@ -11,7 +11,7 @@ services:
       - lab11net
 
   web2:
-    image: nginx
+    image: nginx:latest
     container_name: web2
     volumes:
       - ./html:/usr/share/nginx/html:ro
@@ -22,7 +22,7 @@ services:
       - lab11net
 
   web3:
-    image: nginx
+    image: nginx:latest
     container_name: web3
     volumes:
       - ./html:/usr/share/nginx/html:ro
