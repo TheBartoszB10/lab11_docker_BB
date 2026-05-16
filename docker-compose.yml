@@ -35,5 +35,6 @@ services:
 networks:
   lab11net:
     driver: bridge
+    name: lab11net
 
 
