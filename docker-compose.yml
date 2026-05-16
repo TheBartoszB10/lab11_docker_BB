@@ -1,0 +1,39 @@
+services:
+  web1:
+    image: nginx
+    container_name: web1
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - /home/bartosz/lab11/web1:/var/log/nginx:rw
+    ports:
+      - 80:80
+    networks:
+      - lab11net
+
+  web2:
+    image: nginx
+    container_name: web2
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - /home/bartosz/lab11/web2:/var/log/nginx:rw
+    ports:
+      - 81:80
+    networks:
+      - lab11net
+
+  web3:
+    image: nginx
+    container_name: web3
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - /home/bartosz/lab11/web3:/var/log/nginx:rw
+    ports:
+      - 82:80
+    networks:
+      - lab11net
+
+networks:
+  lab11net:
+    driver: bridge
+
+
